@@ -1,0 +1,7 @@
+numpy>=2.0
+scipy>=1.14
+openpyxl>=3.1
+matplotlib>=3.9
+python-docx>=1.1
+PyYAML>=6.0
+pypandoc>=1.14

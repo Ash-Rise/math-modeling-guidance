@@ -1,0 +1,164 @@
+profile_version: 3.8
+name: chinese-modeling-paper
+scope: repository_global_paper_formatting_default
+priority:
+  - current_official_requirements
+  - current_explicit_user_requirements_or_template
+  - current_project_approved_local_word_layout
+  - this_profile_defaults
+
+# Executable parameters below; layout advice lives in the playbook.
+page:
+  width_twips: 11906
+  height_twips: 16838
+  margins_twips:
+    top: 1418
+    bottom: 1418
+    left: 1418
+    right: 1418
+  header_distance_twips: 851
+  footer_distance_twips: 1020
+  different_first_page: true
+  document_grid:
+    type: lines
+    line_pitch_twips: 360
+    char_space_twips: 0
+
+paragraphs:
+  snap_to_document_grid: false
+
+pagination:
+  first_body_heading_starts_new_page: true
+
+typography:
+  latin_font: Times New Roman
+  font_color_hex: '000000'
+  title:
+    east_asia_font: 宋体
+    size_pt: 15
+    bold: true
+    alignment: center
+    line_spacing_multiple: 1.0
+    space_after_pt: 3
+  heading_level_1:
+    east_asia_font: 宋体
+    size_pt: 14
+    bold: true
+    alignment: center
+    line_spacing_multiple: 1.0
+    space_before_pt: 2.5
+    space_after_pt: 2.5
+  heading_level_2_and_3:
+    east_asia_font: 宋体
+    size_pt: 14
+    bold: true
+    alignment: left
+    line_spacing_multiple: 1.0
+    space_before_pt: 2.5
+    space_after_pt: 2.5
+  body:
+    east_asia_font: 宋体
+    size_pt: 10.5
+    alignment: justify
+    first_line_indent_pt: 21
+    first_line_indent_chars: 2
+    line_spacing_multiple: 1.35
+    space_before_pt: 0
+    space_after_pt: 0
+  caption:
+    east_asia_font: 宋体
+    size_pt: 10.5
+    bold: true
+    label_separator: '　'  # U+3000: one Chinese character width
+    alignment: center
+    line_spacing_multiple: 1.5
+    space_before_pt: 0
+    space_after_pt: 0
+  reference_and_short_appendix:
+    east_asia_font: 宋体
+    size_pt: 10.5
+    alignment: left
+    line_spacing_multiple: 1.25
+    space_before_pt: 0
+    space_after_pt: 0
+    hanging_indent_pt: 21
+  page_number:
+    east_asia_font: 宋体
+    size_pt: 10.5
+    bold: false
+    italic: false
+  table_text:
+    east_asia_font: 宋体
+    size_pt: 10.5
+    alignment: center
+    line_spacing_multiple: 1.35
+    first_line_indent_pt: 0
+    space_before_pt: 0
+    space_after_pt: 0
+    vertical_alignment: center
+
+docx:
+  prune_unreferenced_font_table_entries: true
+
+equations:
+  math_font: Cambria Math
+  display_alignment: center
+  number_alignment: right
+  number_field: 'SEQ Equation \r {number} \* ARABIC'
+  number_wrapper: ['(', ')']
+
+tables:
+  cell_margins_twips:
+    top: 55
+    bottom: 55
+    start: 70
+    end: 70
+  repeat_header_row: true
+  prevent_row_split: true
+  top_border_ooxml_size: 10
+  header_bottom_border_ooxml_size: 4
+  bottom_border_ooxml_size: 10
+  inside_horizontal: nil
+  inside_vertical: nil
+  left_border: nil
+  right_border: nil
+  remove_row_tblPrEx_borders: true
+
+figures:
+  # Plotting starting points at final placed size, not mandatory chart layouts.
+  matplotlib:
+    size_presets:
+      compact: [0.5, 0.8]  # fraction of text width, height / width
+      wide: [1.0, 0.62]
+      tall: [1.0, 0.85]
+    rc:
+      font.size: 9
+      axes.labelsize: 9
+      axes.titlesize: 10
+      xtick.labelsize: 8
+      ytick.labelsize: 8
+      legend.fontsize: 8
+      lines.linewidth: 1.2
+      lines.linestyle: '-'
+      lines.marker: 'None'
+      lines.markersize: 4
+      axes.linewidth: 0.7
+      grid.linewidth: 0.5
+      grid.color: '#DDDDDD'
+      legend.frameon: false
+      axes.spines.top: false
+      axes.spines.right: false
+      axes.grid: false
+      axes.axisbelow: true
+      text.usetex: false
+      mathtext.fontset: stix
+      svg.fonttype: none
+      pdf.fonttype: 42
+  raster_dpi_min: 300
+  no_jpeg_for_quantitative_charts: true
+
+markdown:
+  source_target:
+    dialect: pandoc_markdown
+    inline_math_delimiter: '$...$'
+    display_math_delimiter: '$$...$$'

@@ -1,0 +1,47 @@
+{
+  "checks": {
+    "matrix_max_reflectance_error": 5.551115123125783e-16,
+    "80_pass_max_reflectance_error": 5.551115123125783e-16,
+    "input1_over_100_percent": 0,
+    "input2_over_100_percent": 262,
+    "input3_over_100_percent": 0,
+    "input4_over_100_percent": 0
+  },
+  "fits": {
+    "SiC_two": {
+      "recomputed_rmse_pp": 0.6679414694249789,
+      "n": 14726
+    },
+    "SiC_multi": {
+      "recomputed_rmse_pp": 0.6638246931488269,
+      "n": 14726,
+      "same_parameters_two_minus_multi_rms_pp": 0.03232253852820432,
+      "same_parameters_two_minus_multi_max_pp": 0.7031507073299346
+    },
+    "Si_two": {
+      "recomputed_rmse_pp": 4.363184860096222,
+      "n": 14726
+    },
+    "Si_multi": {
+      "recomputed_rmse_pp": 1.1327070045823033,
+      "n": 14726,
+      "same_parameters_two_minus_multi_rms_pp": 5.542083557537752,
+      "same_parameters_two_minus_multi_max_pp": 25.202559332227082
+    }
+  },
+  "synthetic": [
+    {
+      "material": "SiC",
+      "true_d_um": 5.2,
+      "recovered_d_um": 5.199999999949042,
+      "error_um": 5.0958348651874985e-11
+    },
+    {
+      "material": "Si",
+      "true_d_um": 4.2,
+      "recovered_d_um": 4.199999999936696,
+      "error_um": 6.330402868570673e-11
+    }
+  ],
+  "status": "passed; implementation and conditional numerical checks, not absolute metrological accuracy"
+}
