@@ -9,4 +9,4 @@
 | [A 题：烟幕干扰](solutions/problem-a-smoke-screen/README.md) | 几何建模、核心求解、论文与图表 |
 | [B 题：外延层厚度](solutions/problem-b-epitaxial-thickness/README.md) | 光学反演、核心求解、论文与图表 |
 
-项目示例聚焦方法、计算、证据与成稿；原始题面和官方附件由相应权利方管理，内部决策、审计、候选方案和历史基线由私有工作区承载。
+两个示例共同展示从题意分析、模型构建和真实计算到证据组织、论文成稿的完整链条。
