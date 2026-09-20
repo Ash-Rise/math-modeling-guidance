@@ -13,6 +13,10 @@ from shared.figure_style import paper_style,figure_size,save_figure
 OUT=ROOT/'figures'
 
 def finish(fig,name):
+    if len(fig.axes)>1:
+        for i,ax in enumerate(fig.axes):
+            ax.text(-.09,1.02,f'({chr(97+i)})',transform=ax.transAxes,
+                    ha='left',va='bottom',fontsize=8.5,fontweight='bold',color='.15')
     fig.tight_layout(pad=.8,rect=(0,0,1,.94) if fig.legends else (0,0,1,1))
     save_figure(fig,OUT/f'{name}.png')
     plt.close(fig)

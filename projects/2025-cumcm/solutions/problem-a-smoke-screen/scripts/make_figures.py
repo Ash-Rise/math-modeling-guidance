@@ -19,7 +19,7 @@ FROZEN = (PROJECT_ROOT / "results" / "frozen").resolve()
 AUDITS = (PROJECT_ROOT / "results" / "audits").resolve()
 OUTPUT = PROJECT_ROOT / "figures"
 sys.path.insert(0, str(PROJECT_ROOT.parents[3]))
-from shared.figure_style import PALETTES, contrast_text
+from shared.figure_style import PALETTES, contrast_text, save_figure
 
 MISSILES = {
     "M1": np.array([20000.0, 0.0, 2000.0]),
@@ -87,8 +87,8 @@ def load_audit(name: str) -> dict:
 
 def save(fig: plt.Figure, stem: str) -> None:
     OUTPUT.mkdir(parents=True, exist_ok=True)
-    fig.savefig(OUTPUT / f"{stem}.png", dpi=300, bbox_inches="tight", pad_inches=0.04)
-    fig.savefig(OUTPUT / f"{stem}.pdf", bbox_inches="tight", pad_inches=0.04)
+    save_figure(fig, OUTPUT / f"{stem}.png", bbox_inches="tight", pad_inches=0.04)
+    save_figure(fig, OUTPUT / f"{stem}.pdf", bbox_inches="tight", pad_inches=0.04)
     plt.close(fig)
 
 

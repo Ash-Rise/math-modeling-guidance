@@ -21,3 +21,6 @@ Thumbs.db
 
 projects/2026-summer-assignment/solutions/problem-a-ambulance-dispatch/src/generate_figures.py
 projects/2025-cumcm/solutions/problem-a-smoke-screen/results/frozen/q[3-5].json
+
+!projects/2025-cumcm/**/paper/paper.docx
+!projects/2025-cumcm/**/paper/paper.pdf

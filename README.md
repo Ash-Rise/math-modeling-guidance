@@ -1,8 +1,6 @@
 # Mathematical Modeling Guidance
 
-面向 AI 辅助数学建模的公开方法与项目示例。仓库关注题意权威、模型决策、真实计算、证据链、论文同步和交付验证，而不是提供一次性生成论文的提示词。
-
-这是从私有工作仓库导出的脱敏快照，只包含当前公开接口，不继承原仓库的提交、分支、PR、Actions 或协作历史。
+本仓库汇集一套面向 AI 辅助数学建模的公开方法与项目示例，覆盖题意权威、模型决策、真实计算、证据链、论文同步和交付验证。内容以脱敏发布快照组织，便于阅读方法、理解工作流并查看完整项目产物。
 
 ## 方法入口
 
@@ -16,17 +14,18 @@
 
 | 项目集合 | 内容 |
 | --- | --- |
-| [2025 CUMCM](projects/2025-cumcm/README.md) | A/B 题论文、核心代码、图表与适合公开的结果 |
-| [2026 Summer Assignment](projects/2026-summer-assignment/README.md) | A/B/C 题论文、实现与实验产物 |
+| [2025 CUMCM](projects/2025-cumcm/README.md) | A/B 题论文、Word/PDF 成稿、核心代码、图表与结果 |
 
-示例保留论文 Markdown、核心代码、图表及适合公开的结果。原始题面、官方附件和部分输入数据不随仓库再分发；缺少公开输入的项目用于展示方法和产物组织，不声称克隆后能够完整重算。
+示例以论文 Markdown、Word/PDF 成稿、核心代码、图表和结果构成完整的公开阅读路径。原始题面、官方附件和部分输入数据由相应权利方管理，示例目录重点呈现建模方法及产物组织。
 
-## Skill 来源边界
+## 方法来源
 
-本仓库不分发本地安装的 Skills。竞赛路由参考 [handsomeZR/mathmodel-skill](https://github.com/handsomeZR/mathmodel-skill)，建模执行方法参考 [XiaoMa-Lab/MathModelAgent](https://github.com/XiaoMa-Lab/MathModelAgent)。使用上游内容时应分别遵守其当前许可证；本仓库也不包含本地工具目录中的专有组件。
+竞赛路由方法参考 [handsomeZR-netizen/mathmodel-skill](https://github.com/handsomeZR-netizen/mathmodel-skill)，建模执行方法参考 [XiaoMaColtAI/math-modeling-skill](https://github.com/XiaoMaColtAI/math-modeling-skill)。本仓库公开自有的治理文档、模板和项目示例；上游 Skills 通过来源链接单独列示，并适用各自的授权条件。
 
 ## 公开范围
 
-本快照排除了 2026 CUMCM 项目、Git 与 PR 历史、内部决策及复核材料、个人路径与运行日志、不可再分发的题面附件、未公开数据，以及带有文档元数据的 DOCX/PDF/XLSX 等二进制交付物。详见 [公开范围说明](PUBLICATION_SCOPE.md)。
+公开快照由当前方法文档、共享工具和 2025 CUMCM 示例组成。工作历史、内部决策与复核资料保留在私有工作区，题面附件和输入数据继续由原权利方管理。详见 [公开范围说明](PUBLICATION_SCOPE.md)。
 
-除文件另有声明外，本仓库当前未授予额外的复制、修改或再分发许可。
+## 版权与使用
+
+本仓库内容保留全部权利。复制、修改、再分发或商业使用需要仓库所有者事先书面授权；链接指向的第三方内容适用其各自的许可条款。详见 [版权说明](LICENSE.md)。
