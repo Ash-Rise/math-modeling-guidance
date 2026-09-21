@@ -27,3 +27,5 @@ projects/2025-cumcm/solutions/problem-a-smoke-screen/results/frozen/q[3-5].json
 !projects/2025-cumcm/**/paper/paper.pdf
 !projects/2026-cumcm/**/paper/paper.docx
 !projects/2026-cumcm/**/paper/paper.pdf
+!projects/2026-cumcm/**/decisions.md
+!projects/2026-cumcm/**/state.md

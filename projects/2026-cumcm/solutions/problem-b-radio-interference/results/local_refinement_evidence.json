@@ -1,0 +1,777 @@
+{
+  "scope": "Deterministic synthetic geometry evidence; not official simulator performance",
+  "runtime": {
+    "python": "3.13.14",
+    "packages": {
+      "numpy": "2.5.3",
+      "scipy": "1.18.1"
+    }
+  },
+  "design": {
+    "first_position": [
+      0.0,
+      0.0
+    ],
+    "first_report_degrees": 0.0,
+    "second_position": [
+      550.0,
+      575.0
+    ],
+    "distances_m": [
+      20.001,
+      100.0,
+      300.0,
+      600.0,
+      900.0,
+      1200.0,
+      1500.0
+    ],
+    "first_true_offsets_degrees": [
+      -1.0,
+      0.0,
+      1.0
+    ],
+    "second_error_degrees": [
+      -1.0,
+      0.0,
+      1.0
+    ],
+    "follow_up_finite_design": {
+      "offset_radii_m": [
+        150.0,
+        300.0,
+        500.0
+      ],
+      "directions": 12,
+      "move_budget_m": 700.0,
+      "response_bin_degrees": 5.0
+    },
+    "contract": "Every retained follow-up is within 1000 m of the full current enclosure. Each 5-degree response bin is enlarged by its 2.5-degree half-width before the next enclosing radius is computed."
+  },
+  "summary": {
+    "cases": 63,
+    "status_counts": {
+      "clear_after_next_normal_reply": 9,
+      "clear_after_two": 37,
+      "needs_more_evidence": 17
+    },
+    "max_radius_after_two_readings_m": 75.4832726586866,
+    "max_certified_next_radius_upper_m": 54.059298644961316,
+    "max_selected_probe_move_m": 696.7681528201882,
+    "min_selected_reception_margin_m": 440.61194642310534
+  },
+  "cases": [
+    {
+      "distance_m": 20.001,
+      "first_true_offset_degrees": -1.0,
+      "second_error_degrees": -1.0,
+      "second_report_degrees": 226.35,
+      "radius_after_two_readings_m": 10.334507653847117,
+      "status": "clear_after_two"
+    },
+    {
+      "distance_m": 20.001,
+      "first_true_offset_degrees": -1.0,
+      "second_error_degrees": 0.0,
+      "second_report_degrees": 227.35,
+      "radius_after_two_readings_m": 18.877638016809414,
+      "status": "clear_after_two"
+    },
+    {
+      "distance_m": 20.001,
+      "first_true_offset_degrees": -1.0,
+      "second_error_degrees": 1.0,
+      "second_report_degrees": 228.34,
+      "radius_after_two_readings_m": 18.58462506720434,
+      "status": "clear_after_two"
+    },
+    {
+      "distance_m": 20.001,
+      "first_true_offset_degrees": 0.0,
+      "second_error_degrees": -1.0,
+      "second_report_degrees": 226.34,
+      "radius_after_two_readings_m": 10.240264831048313,
+      "status": "clear_after_two"
+    },
+    {
+      "distance_m": 20.001,
+      "first_true_offset_degrees": 0.0,
+      "second_error_degrees": 0.0,
+      "second_report_degrees": 227.33,
+      "radius_after_two_readings_m": 18.883711132179087,
+      "status": "clear_after_two"
+    },
+    {
+      "distance_m": 20.001,
+      "first_true_offset_degrees": 0.0,
+      "second_error_degrees": 1.0,
+      "second_report_degrees": 228.33,
+      "radius_after_two_readings_m": 18.58751170668232,
+      "status": "clear_after_two"
+    },
+    {
+      "distance_m": 20.001,
+      "first_true_offset_degrees": 1.0,
+      "second_error_degrees": -1.0,
+      "second_report_degrees": 226.32,
+      "radius_after_two_readings_m": 10.051684969024073,
+      "status": "clear_after_two"
+    },
+    {
+      "distance_m": 20.001,
+      "first_true_offset_degrees": 1.0,
+      "second_error_degrees": 0.0,
+      "second_report_degrees": 227.31,
+      "radius_after_two_readings_m": 18.88979045876864,
+      "status": "clear_after_two"
+    },
+    {
+      "distance_m": 20.001,
+      "first_true_offset_degrees": 1.0,
+      "second_error_degrees": 1.0,
+      "second_report_degrees": 228.31,
+      "radius_after_two_readings_m": 18.59328937625235,
+      "status": "clear_after_two"
+    },
+    {
+      "distance_m": 100.0,
+      "first_true_offset_degrees": -1.0,
+      "second_error_degrees": -1.0,
+      "second_report_degrees": 231.04,
+      "radius_after_two_readings_m": 17.85607521578047,
+      "status": "clear_after_two"
+    },
+    {
+      "distance_m": 100.0,
+      "first_true_offset_degrees": -1.0,
+      "second_error_degrees": 0.0,
+      "second_report_degrees": 232.04,
+      "radius_after_two_readings_m": 17.610232647850335,
+      "status": "clear_after_two"
+    },
+    {
+      "distance_m": 100.0,
+      "first_true_offset_degrees": -1.0,
+      "second_error_degrees": 1.0,
+      "second_report_degrees": 233.03,
+      "radius_after_two_readings_m": 17.37857134486419,
+      "status": "clear_after_two"
+    },
+    {
+      "distance_m": 100.0,
+      "first_true_offset_degrees": 0.0,
+      "second_error_degrees": -1.0,
+      "second_report_degrees": 230.96,
+      "radius_after_two_readings_m": 17.87627599788981,
+      "status": "clear_after_two"
+    },
+    {
+      "distance_m": 100.0,
+      "first_true_offset_degrees": 0.0,
+      "second_error_degrees": 0.0,
+      "second_report_degrees": 231.95,
+      "radius_after_two_readings_m": 17.631861804408864,
+      "status": "clear_after_two"
+    },
+    {
+      "distance_m": 100.0,
+      "first_true_offset_degrees": 0.0,
+      "second_error_degrees": 1.0,
+      "second_report_degrees": 232.95,
+      "radius_after_two_readings_m": 17.396872654561474,
+      "status": "clear_after_two"
+    },
+    {
+      "distance_m": 100.0,
+      "first_true_offset_degrees": 1.0,
+      "second_error_degrees": -1.0,
+      "second_report_degrees": 230.87,
+      "radius_after_two_readings_m": 17.899098343099293,
+      "status": "clear_after_two"
+    },
+    {
+      "distance_m": 100.0,
+      "first_true_offset_degrees": 1.0,
+      "second_error_degrees": 0.0,
+      "second_report_degrees": 231.87,
+      "radius_after_two_readings_m": 17.651168977724346,
+      "status": "clear_after_two"
+    },
+    {
+      "distance_m": 100.0,
+      "first_true_offset_degrees": 1.0,
+      "second_error_degrees": 1.0,
+      "second_report_degrees": 232.86,
+      "radius_after_two_readings_m": 17.41754839210739,
+      "status": "clear_after_two"
+    },
+    {
+      "distance_m": 300.0,
+      "first_true_offset_degrees": -1.0,
+      "second_error_degrees": -1.0,
+      "second_report_degrees": 245.69,
+      "radius_after_two_readings_m": 15.2355312875873,
+      "status": "clear_after_two"
+    },
+    {
+      "distance_m": 300.0,
+      "first_true_offset_degrees": -1.0,
+      "second_error_degrees": 0.0,
+      "second_report_degrees": 246.69,
+      "radius_after_two_readings_m": 15.118642634606955,
+      "status": "clear_after_two"
+    },
+    {
+      "distance_m": 300.0,
+      "first_true_offset_degrees": -1.0,
+      "second_error_degrees": 1.0,
+      "second_report_degrees": 247.68,
+      "radius_after_two_readings_m": 15.009145822235856,
+      "status": "clear_after_two"
+    },
+    {
+      "distance_m": 300.0,
+      "first_true_offset_degrees": 0.0,
+      "second_error_degrees": -1.0,
+      "second_report_degrees": 245.51,
+      "radius_after_two_readings_m": 15.257258782077328,
+      "status": "clear_after_two"
+    },
+    {
+      "distance_m": 300.0,
+      "first_true_offset_degrees": 0.0,
+      "second_error_degrees": 0.0,
+      "second_report_degrees": 246.5,
+      "radius_after_two_readings_m": 15.140358920848742,
+      "status": "clear_after_two"
+    },
+    {
+      "distance_m": 300.0,
+      "first_true_offset_degrees": 0.0,
+      "second_error_degrees": 1.0,
+      "second_report_degrees": 247.5,
+      "radius_after_two_readings_m": 15.02860297604903,
+      "status": "clear_after_two"
+    },
+    {
+      "distance_m": 300.0,
+      "first_true_offset_degrees": 1.0,
+      "second_error_degrees": -1.0,
+      "second_report_degrees": 245.31,
+      "radius_after_two_readings_m": 15.281650403881864,
+      "status": "clear_after_two"
+    },
+    {
+      "distance_m": 300.0,
+      "first_true_offset_degrees": 1.0,
+      "second_error_degrees": 0.0,
+      "second_report_degrees": 246.31,
+      "radius_after_two_readings_m": 15.162304657819192,
+      "status": "clear_after_two"
+    },
+    {
+      "distance_m": 300.0,
+      "first_true_offset_degrees": 1.0,
+      "second_error_degrees": 1.0,
+      "second_report_degrees": 247.3,
+      "radius_after_two_readings_m": 15.05045574574677,
+      "status": "clear_after_two"
+    },
+    {
+      "distance_m": 600.0,
+      "first_true_offset_degrees": -1.0,
+      "second_error_degrees": -1.0,
+      "second_report_degrees": 273.88,
+      "radius_after_two_readings_m": 14.901835984667375,
+      "status": "clear_after_two"
+    },
+    {
+      "distance_m": 600.0,
+      "first_true_offset_degrees": -1.0,
+      "second_error_degrees": 0.0,
+      "second_report_degrees": 274.87,
+      "radius_after_two_readings_m": 15.181915077036871,
+      "status": "clear_after_two"
+    },
+    {
+      "distance_m": 600.0,
+      "first_true_offset_degrees": -1.0,
+      "second_error_degrees": 1.0,
+      "second_report_degrees": 275.87,
+      "radius_after_two_readings_m": 15.474702183536099,
+      "status": "clear_after_two"
+    },
+    {
+      "distance_m": 600.0,
+      "first_true_offset_degrees": 0.0,
+      "second_error_degrees": -1.0,
+      "second_report_degrees": 273.97,
+      "radius_after_two_readings_m": 14.92690330312154,
+      "status": "clear_after_two"
+    },
+    {
+      "distance_m": 600.0,
+      "first_true_offset_degrees": 0.0,
+      "second_error_degrees": 0.0,
+      "second_report_degrees": 274.97,
+      "radius_after_two_readings_m": 15.210741950814567,
+      "status": "clear_after_two"
+    },
+    {
+      "distance_m": 600.0,
+      "first_true_offset_degrees": 0.0,
+      "second_error_degrees": 1.0,
+      "second_report_degrees": 275.96,
+      "radius_after_two_readings_m": 15.501550833843062,
+      "status": "clear_after_two"
+    },
+    {
+      "distance_m": 600.0,
+      "first_true_offset_degrees": 1.0,
+      "second_error_degrees": -1.0,
+      "second_report_degrees": 274.06,
+      "radius_after_two_readings_m": 14.952048885403547,
+      "status": "clear_after_two"
+    },
+    {
+      "distance_m": 600.0,
+      "first_true_offset_degrees": 1.0,
+      "second_error_degrees": 0.0,
+      "second_report_degrees": 275.05,
+      "radius_after_two_readings_m": 15.233875114732593,
+      "status": "clear_after_two"
+    },
+    {
+      "distance_m": 600.0,
+      "first_true_offset_degrees": 1.0,
+      "second_error_degrees": 1.0,
+      "second_report_degrees": 276.05,
+      "radius_after_two_readings_m": 15.528482767936662,
+      "status": "clear_after_two"
+    },
+    {
+      "distance_m": 900.0,
+      "first_true_offset_degrees": -1.0,
+      "second_error_degrees": -1.0,
+      "second_report_degrees": 299.64,
+      "radius_after_two_readings_m": 26.826198148360337,
+      "status": "clear_after_next_normal_reply",
+      "probe_position": [
+        1007.7853117378177,
+        74.6156571463905
+      ],
+      "probe_move_m": 678.1975244837815,
+      "probe_move_and_measure_s": 140.6395048967563,
+      "probe_reception_margin_m": 836.7767671894603,
+      "certified_next_radius_upper_m": 14.961545371933967
+    },
+    {
+      "distance_m": 900.0,
+      "first_true_offset_degrees": -1.0,
+      "second_error_degrees": 0.0,
+      "second_report_degrees": 300.64,
+      "radius_after_two_readings_m": 27.593257641486506,
+      "status": "clear_after_next_normal_reply",
+      "probe_position": [
+        1021.2427248482858,
+        74.60222185230377
+      ],
+      "probe_move_m": 687.3628169297407,
+      "probe_move_and_measure_s": 142.47256338594815,
+      "probe_reception_margin_m": 836.1454683161141,
+      "certified_next_radius_upper_m": 15.186733627390545
+    },
+    {
+      "distance_m": 900.0,
+      "first_true_offset_degrees": -1.0,
+      "second_error_degrees": 1.0,
+      "second_report_degrees": 301.63,
+      "radius_after_two_readings_m": 28.38911505896191,
+      "status": "clear_after_next_normal_reply",
+      "probe_position": [
+        1034.8442472087584,
+        74.58825480107937
+      ],
+      "probe_move_m": 696.7681528201882,
+      "probe_move_and_measure_s": 144.35363056403764,
+      "probe_reception_margin_m": 835.4851375782127,
+      "certified_next_radius_upper_m": 15.424172460436333
+    },
+    {
+      "distance_m": 900.0,
+      "first_true_offset_degrees": 0.0,
+      "second_error_degrees": -1.0,
+      "second_report_degrees": 300.33,
+      "radius_after_two_readings_m": 27.351621419921347,
+      "status": "clear_after_next_normal_reply",
+      "probe_position": [
+        1017.0414611399507,
+        74.60645719984267
+      ],
+      "probe_move_m": 684.4862482912516,
+      "probe_move_and_measure_s": 141.89724965825033,
+      "probe_reception_margin_m": 836.3449041219644,
+      "certified_next_radius_upper_m": 15.115384374862844
+    },
+    {
+      "distance_m": 900.0,
+      "first_true_offset_degrees": 0.0,
+      "second_error_degrees": 0.0,
+      "second_report_degrees": 301.33,
+      "radius_after_two_readings_m": 28.143970857398234,
+      "status": "clear_after_next_normal_reply",
+      "probe_position": [
+        1030.6922804134388,
+        74.59255969106356
+      ],
+      "probe_move_m": 693.8823205455042,
+      "probe_move_and_measure_s": 143.77646410910083,
+      "probe_reception_margin_m": 835.6890856990196,
+      "certified_next_radius_upper_m": 15.350654212420638
+    },
+    {
+      "distance_m": 900.0,
+      "first_true_offset_degrees": 0.0,
+      "second_error_degrees": 1.0,
+      "second_report_degrees": 302.32,
+      "radius_after_two_readings_m": 28.966562984844327,
+      "status": "clear_after_next_normal_reply",
+      "probe_position": [
+        784.6895793813381,
+        -75.42189408132008
+      ],
+      "probe_move_m": 691.4678871578357,
+      "probe_move_and_measure_s": 143.29357743156714,
+      "probe_reception_margin_m": 835.0028920233949,
+      "certified_next_radius_upper_m": 15.784141876192873
+    },
+    {
+      "distance_m": 900.0,
+      "first_true_offset_degrees": 1.0,
+      "second_error_degrees": -1.0,
+      "second_report_degrees": 301.03,
+      "radius_after_two_readings_m": 27.90231306093539,
+      "status": "clear_after_next_normal_reply",
+      "probe_position": [
+        1026.5668631224405,
+        74.5968010722314
+      ],
+      "probe_move_m": 691.027739329983,
+      "probe_move_and_measure_s": 143.2055478659966,
+      "probe_reception_margin_m": 835.8896600727171,
+      "certified_next_radius_upper_m": 15.278507598254949
+    },
+    {
+      "distance_m": 900.0,
+      "first_true_offset_degrees": 1.0,
+      "second_error_degrees": 0.0,
+      "second_report_degrees": 302.03,
+      "radius_after_two_readings_m": 28.721518983050583,
+      "status": "clear_after_next_normal_reply",
+      "probe_position": [
+        780.6147268443067,
+        -75.41758593381313
+      ],
+      "probe_move_m": 690.0914347602377,
+      "probe_move_and_measure_s": 143.01828695204753,
+      "probe_reception_margin_m": 835.2078445743616,
+      "certified_next_radius_upper_m": 15.709659151991648
+    },
+    {
+      "distance_m": 900.0,
+      "first_true_offset_degrees": 1.0,
+      "second_error_degrees": 1.0,
+      "second_report_degrees": 303.02,
+      "radius_after_two_readings_m": 29.572524688758325,
+      "status": "clear_after_next_normal_reply",
+      "probe_position": [
+        794.6349068927583,
+        -75.43255567505238
+      ],
+      "probe_move_m": 694.9163598249855,
+      "probe_move_and_measure_s": 143.9832719649971,
+      "probe_reception_margin_m": 834.4942003300695,
+      "certified_next_radius_upper_m": 15.967878775302717
+    },
+    {
+      "distance_m": 1200.0,
+      "first_true_offset_degrees": -1.0,
+      "second_error_degrees": -1.0,
+      "second_report_degrees": 316.48,
+      "radius_after_two_readings_m": 47.04734985034795,
+      "status": "needs_more_evidence",
+      "probe_position": [
+        1157.4147434208564,
+        299.2583544716941
+      ],
+      "probe_move_m": 667.0728038255515,
+      "probe_move_and_measure_s": 138.4145607651103,
+      "probe_reception_margin_m": 676.9905533317577,
+      "certified_next_radius_upper_m": 28.09145074790501
+    },
+    {
+      "distance_m": 1200.0,
+      "first_true_offset_degrees": -1.0,
+      "second_error_degrees": 0.0,
+      "second_report_degrees": 317.48,
+      "radius_after_two_readings_m": 49.002574632706754,
+      "status": "needs_more_evidence",
+      "probe_position": [
+        1179.1151043771124,
+        299.22375916791833
+      ],
+      "probe_move_m": 686.9049057641816,
+      "probe_move_and_measure_s": 142.38098115283634,
+      "probe_reception_margin_m": 676.3486898721551,
+      "certified_next_radius_upper_m": 28.378565906825273
+    },
+    {
+      "distance_m": 1200.0,
+      "first_true_offset_degrees": -1.0,
+      "second_error_degrees": 1.0,
+      "second_report_degrees": 318.47,
+      "radius_after_two_readings_m": 51.07242604103831,
+      "status": "needs_more_evidence",
+      "probe_position": [
+        1201.435612224041,
+        499.1871477944001
+      ],
+      "probe_move_m": 655.8322540354807,
+      "probe_move_and_measure_s": 136.16645080709614,
+      "probe_reception_margin_m": 476.9516952365956,
+      "certified_next_radius_upper_m": 34.75470541637305
+    },
+    {
+      "distance_m": 1200.0,
+      "first_true_offset_degrees": 0.0,
+      "second_error_degrees": -1.0,
+      "second_report_degrees": 317.51,
+      "radius_after_two_readings_m": 49.063273818363825,
+      "status": "needs_more_evidence",
+      "probe_position": [
+        1179.7789353453186,
+        299.22268534317624
+      ],
+      "probe_move_m": 687.5133705492656,
+      "probe_move_and_measure_s": 142.5026741098531,
+      "probe_reception_margin_m": 676.3287541471127,
+      "certified_next_radius_upper_m": 28.387382499462475
+    },
+    {
+      "distance_m": 1200.0,
+      "first_true_offset_degrees": 0.0,
+      "second_error_degrees": 0.0,
+      "second_report_degrees": 318.5,
+      "radius_after_two_readings_m": 51.137366101169626,
+      "status": "needs_more_evidence",
+      "probe_position": [
+        1202.1256556793019,
+        499.1859993510309
+      ],
+      "probe_move_m": 656.5178089660335,
+      "probe_move_and_measure_s": 136.3035617932067,
+      "probe_reception_margin_m": 476.9338365187689,
+      "certified_next_radius_upper_m": 34.78834399842634
+    },
+    {
+      "distance_m": 1200.0,
+      "first_true_offset_degrees": 0.0,
+      "second_error_degrees": 1.0,
+      "second_report_degrees": 319.5,
+      "radius_after_two_readings_m": 53.381568861294355,
+      "status": "needs_more_evidence",
+      "probe_position": [
+        1225.6109816350881,
+        499.14631952194554
+      ],
+      "probe_move_m": 679.8558518892032,
+      "probe_move_and_measure_s": 140.97117037784065,
+      "probe_reception_margin_m": 476.3181204760434,
+      "certified_next_radius_upper_m": 35.948618237004645
+    },
+    {
+      "distance_m": 1200.0,
+      "first_true_offset_degrees": 1.0,
+      "second_error_degrees": -1.0,
+      "second_report_degrees": 318.55,
+      "radius_after_two_readings_m": 51.24589917042537,
+      "status": "needs_more_evidence",
+      "probe_position": [
+        1203.277562404105,
+        499.1840800090489
+      ],
+      "probe_move_m": 657.6622440620441,
+      "probe_move_and_measure_s": 136.53244881240883,
+      "probe_reception_margin_m": 476.9039954700162,
+      "certified_next_radius_upper_m": 34.84455513390438
+    },
+    {
+      "distance_m": 1200.0,
+      "first_true_offset_degrees": 1.0,
+      "second_error_degrees": 0.0,
+      "second_report_degrees": 319.55,
+      "radius_after_two_readings_m": 53.49797493663893,
+      "status": "needs_more_evidence",
+      "probe_position": [
+        1226.810597157549,
+        499.14426177884746
+      ],
+      "probe_move_m": 681.0482196187243,
+      "probe_move_and_measure_s": 141.20964392374486,
+      "probe_reception_margin_m": 476.2862501935434,
+      "certified_next_radius_upper_m": 36.00868963398189
+    },
+    {
+      "distance_m": 1200.0,
+      "first_true_offset_degrees": 1.0,
+      "second_error_degrees": 1.0,
+      "second_report_degrees": 320.54,
+      "radius_after_two_readings_m": 55.89070805529133,
+      "status": "needs_more_evidence",
+      "probe_position": [
+        1101.0868503434788,
+        258.909595547947
+      ],
+      "probe_move_m": 635.3029674164588,
+      "probe_move_and_measure_s": 132.06059348329177,
+      "probe_reception_margin_m": 653.7264356907332,
+      "certified_next_radius_upper_m": 41.347607450954854
+    },
+    {
+      "distance_m": 1500.0,
+      "first_true_offset_degrees": -1.0,
+      "second_error_degrees": -1.0,
+      "second_report_degrees": 326.67,
+      "radius_after_two_readings_m": 75.4832726586866,
+      "status": "needs_more_evidence",
+      "probe_position": [
+        1178.5257044042528,
+        431.76910115829804
+      ],
+      "probe_move_m": 644.6391637806875,
+      "probe_move_and_measure_s": 133.9278327561375,
+      "probe_reception_margin_m": 440.61194642310534,
+      "certified_next_radius_upper_m": 54.059298644961316
+    },
+    {
+      "distance_m": 1500.0,
+      "first_true_offset_degrees": -1.0,
+      "second_error_degrees": 0.0,
+      "second_report_degrees": 327.67,
+      "radius_after_two_readings_m": 61.51973588592663,
+      "status": "needs_more_evidence",
+      "probe_position": [
+        1193.6494587877642,
+        432.03308727302067
+      ],
+      "probe_move_m": 659.3361539703897,
+      "probe_move_and_measure_s": 136.86723079407793,
+      "probe_reception_margin_m": 448.93857921058395,
+      "certified_next_radius_upper_m": 47.606336983353145
+    },
+    {
+      "distance_m": 1500.0,
+      "first_true_offset_degrees": -1.0,
+      "second_error_degrees": 1.0,
+      "second_report_degrees": 328.66,
+      "radius_after_two_readings_m": 47.73386346121452,
+      "status": "needs_more_evidence",
+      "probe_position": [
+        1209.4032638786384,
+        432.3080709637483
+      ],
+      "probe_move_m": 674.6655845868293,
+      "probe_move_and_measure_s": 139.93311691736585,
+      "probe_reception_margin_m": 457.2995543843615,
+      "certified_next_radius_upper_m": 41.23230574777428
+    },
+    {
+      "distance_m": 1500.0,
+      "first_true_offset_degrees": 0.0,
+      "second_error_degrees": -1.0,
+      "second_report_degrees": 327.82,
+      "radius_after_two_readings_m": 59.414368536619996,
+      "status": "needs_more_evidence",
+      "probe_position": [
+        1195.9847264772725,
+        432.0738495221658
+      ],
+      "probe_move_m": 661.6072485488116,
+      "probe_move_and_measure_s": 137.32144970976233,
+      "probe_reception_margin_m": 450.1984484611529,
+      "certified_next_radius_upper_m": 46.66943307689029
+    },
+    {
+      "distance_m": 1500.0,
+      "first_true_offset_degrees": 0.0,
+      "second_error_degrees": 0.0,
+      "second_report_degrees": 328.82,
+      "radius_after_two_readings_m": 44.62890349576197,
+      "status": "needs_more_evidence",
+      "probe_position": [
+        1212.0556185653681,
+        434.10514896137545
+      ],
+      "probe_move_m": 676.8818221249322,
+      "probe_move_and_measure_s": 140.37636442498643,
+      "probe_reception_margin_m": 460.1274705246374,
+      "certified_next_radius_upper_m": 38.77123273496496
+    },
+    {
+      "distance_m": 1500.0,
+      "first_true_offset_degrees": 0.0,
+      "second_error_degrees": 1.0,
+      "second_report_degrees": 329.81,
+      "radius_after_two_readings_m": 24.678097801850054,
+      "status": "needs_more_evidence",
+      "probe_position": [
+        1229.0018266566267,
+        445.86362208424293
+      ],
+      "probe_move_m": 691.1726880485346,
+      "probe_move_and_measure_s": 143.23453760970693,
+      "probe_reception_margin_m": 478.14186340269896,
+      "certified_next_radius_upper_m": 22.91852528774295
+    },
+    {
+      "distance_m": 1500.0,
+      "first_true_offset_degrees": 1.0,
+      "second_error_degrees": -1.0,
+      "second_report_degrees": 328.98,
+      "radius_after_two_readings_m": 41.46434212691616,
+      "status": "needs_more_evidence",
+      "probe_position": [
+        1215.0585906081933,
+        436.51307403216276
+      ],
+      "probe_move_m": 679.3243390353224,
+      "probe_move_and_measure_s": 140.86486780706448,
+      "probe_reception_margin_m": 462.76094029735964,
+      "certified_next_radius_upper_m": 35.9978401129897
+    },
+    {
+      "distance_m": 1500.0,
+      "first_true_offset_degrees": 1.0,
+      "second_error_degrees": 0.0,
+      "second_report_degrees": 329.98,
+      "radius_after_two_readings_m": 21.166829400452865,
+      "status": "needs_more_evidence",
+      "probe_position": [
+        1231.9377688022482,
+        447.7899480537732
+      ],
+      "probe_move_m": 693.7013174523674,
+      "probe_move_and_measure_s": 143.7402634904735,
+      "probe_reception_margin_m": 481.30861536519774,
+      "certified_next_radius_upper_m": 20.22125597204386
+    },
+    {
+      "distance_m": 1500.0,
+      "first_true_offset_degrees": 1.0,
+      "second_error_degrees": 1.0,
+      "second_report_degrees": 330.97,
+      "radius_after_two_readings_m": 0.18887028929823116,
+      "status": "clear_after_two"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "scope": "Core numerical claims used by the current public paper",
+  "q1": {
+    "planned_kwh": 59482.69899835391,
+    "cost_yuan": 35126.948589289634
+  },
+  "q2": {
+    "quantile": 0.782,
+    "total_cost_yuan": 13712960.311623313,
+    "point_baseline_cost_yuan": 14666787.37586248,
+    "saving_fraction": 0.0650283380743224
+  },
+  "q3": {
+    "quantile": 0.7,
+    "total_cost_yuan": 13374333.010268688,
+    "saving_vs_q2_yuan": 338627.30135462433,
+    "saving_fraction": 0.02469438133580871
+  },
+  "q4": {
+    "q4_2_cost_yuan": 14423213.464497369,
+    "q4_3_cost_yuan": 14077115.93603187,
+    "q4_3_saving_yuan": 346097.52846549824,
+    "q4_3_saving_fraction": 0.023995868141133414
+  }
+}
