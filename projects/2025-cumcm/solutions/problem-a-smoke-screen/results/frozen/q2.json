@@ -1,6 +1,6 @@
 {
   "status": "frozen",
-  "frozen_from": "results/accepted/q2.json",
+  "publication_scope": "published frozen result snapshot",
   "optimality_claim": "credible best-found under recorded multistart and boundary evidence; not a global-optimality proof",
   "model": "complete-cylinder line-of-sight shielding",
   "seed": 778,
@@ -14,7 +14,6 @@
   "shielding_intervals_s": [[0.9275305460765859, 5.515585990443834]],
   "effective_shielding_duration_s": 4.5880554443672485,
   "evidence": {
-    "audit": "results/audits/q2_optimality.json",
     "multistart_runs": 5,
     "speed_cap_slices": 7,
     "strongest_independent_challenger_duration_s": 4.580870029442191,

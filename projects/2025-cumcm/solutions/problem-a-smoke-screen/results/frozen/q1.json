@@ -1,6 +1,6 @@
 {
   "status": "frozen",
-  "frozen_from": "results/accepted/q1.json",
+  "publication_scope": "published frozen result snapshot",
   "model": "complete-cylinder line-of-sight shielding",
   "gravity_m_s2": 9.8,
   "release_time_s": 1.5,
