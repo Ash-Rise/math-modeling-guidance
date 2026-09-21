@@ -1,4 +1,4 @@
-"""Accepted D2: tariff, load and PV share the right endpoint of each interval."""
+"""Tariff, load and PV share the right endpoint of each interval."""
 from dataclasses import dataclass
 from datetime import date, time, timedelta
 from pathlib import Path

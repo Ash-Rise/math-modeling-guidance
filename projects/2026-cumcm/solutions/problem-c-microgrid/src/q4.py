@@ -1,7 +1,7 @@
 """Q4 simulation: inherited Q2/Q3 control with forecast/settlement prices separated.
 
 Point, box and budgeted price uncertainty share exactly the same physical LP.
-D9 inherited net forecasts; D8 price/control rules and original warm-up retained.
+Inherited net forecasts, price/control rules and the original warm-up are retained.
 """
 from time import perf_counter
 import numpy as np
@@ -168,7 +168,7 @@ def simulate(load, pv, actual_price, means, targets, predictions, corrections,
             if not (active and branch == 3):
                 out['versions'][day] = orders[:144]
             for slot in range(start, end):
-                # By D2 this sample belongs to this supply interval; it has
+                # This sample belongs to the current supply interval; it has
                 # occurred at execution, never at the earlier procurement solve.
                 actual = execute((load[day, slot:slot+1]-pv[day, slot:slot+1])/6,
                                  orders[slot:slot+1], soc, battery,

@@ -94,7 +94,7 @@ def prepare_forecasts(load, pv, releases, mode='blend', interpolation='linear'):
 
 
 def risk_targets(load, pv, prepared, alpha):
-    """D7: alpha=.70 is a uniform economic-risk quantile level, not an MPC parameter.
+    """Alpha=.70 is a uniform economic-risk quantile level, not an MPC parameter.
 
     Deterministic Economic MPC absorbs new information by replanning; this
     quantile corrects the forecast uncertainty remaining at each solve.
@@ -179,7 +179,7 @@ def simulate(load, pv, price, battery, prepared, targets, warmup, *,
     and reinitializes each LP with the measured/simulated actual SOC. The
     lower inventory-value controller uses actual net demand and SOC every ten
     minutes; it does not re-solve the procurement MPC at that frequency.
-    Today's future orders remain binding under D4/D5; they are not discarded
+    Today's future orders remain binding across releases; they are not discarded
     freely at the next solve. The horizon endpoint is next day's 24:00.
 
     Common frozen Q2 warm-up; release information and trading are distinct.
@@ -217,7 +217,7 @@ def simulate(load, pv, price, battery, prepared, targets, warmup, *,
                     arrays['max_lp_dual_gap'] = max(arrays['max_lp_dual_gap'], abs(r['cost']-r['dual_cost']))
                     arrays['revision_fee'][day, j-1, start:] = revision_cost(
                         orders[start:144], r['plan'][:144-start], price[start:])
-                    orders[start:] = r['plan']  # D5 baseline for the next release.
+                    orders[start:] = r['plan']  # Effective baseline for the next release.
                 # An information-only update may use tomorrow's forecast to value
                 # inventory. Optimize that auxiliary order conditional on today's
                 # retained schedule using a fixed-order LP.

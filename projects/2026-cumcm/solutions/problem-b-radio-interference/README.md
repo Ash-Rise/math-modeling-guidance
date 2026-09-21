@@ -4,7 +4,7 @@
 
 ## 成品论文
 
-[PDF](paper/paper.pdf) · [Word](paper/paper.docx) · [Markdown 源稿](paper/paper.md)
+[PDF](paper/paper.pdf) · [Word](paper/paper.docx) · [Markdown](paper/paper.md)
 
 论文展示示向误差集合建模、解析定位边界、第二观测点选择、定向源覆盖搜索和完整任务策略。
 

@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it using the metadata below."
+title: "Mathematical Modeling Guidance"
+abstract: "Public guidance and complete paper examples for AI-assisted mathematical modeling."
+type: software
+authors:
+  - name: "Ash-Rise"
+repository-code: "https://github.com/Ash-Rise/math-modeling-guidance"
+url: "https://github.com/Ash-Rise/math-modeling-guidance"
+license: CC-BY-4.0
+keywords:
+  - mathematical modeling
+  - AI-assisted modeling
+  - CUMCM
+  - scientific writing

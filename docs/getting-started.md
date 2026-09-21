@@ -22,6 +22,8 @@ project/
 
 `state.md` 服务持续推进与跨会话恢复，项目进入稳定交付后可压缩为简短的当前状态。`decisions.md` 聚焦已经接受且会影响模型含义的决定。
 
+[从决策到论文主张](decision-to-claim-case-study.md) 用一个关键决策展示模型含义如何进入实现与论文。
+
 ## 执行顺序
 
 1. 从原题提取任务、数据、单位、硬约束和交付要求。
@@ -39,9 +41,9 @@ project/
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
-python projects/2025-cumcm/solutions/problem-a-smoke-screen/scripts/reproduce.py
+python -m pytest shared/tests -q
 ```
 
-最后一条命令复算 A 题问题 1，并将关键数值与公开冻结结果比较。各项目 README 提供论文、图表、核心实现和相应复现入口。
+最后一条命令检查共享工具、论文格式约定与仓库内链接。可继续阅读 [2026 B：无线电干扰源定位](../projects/2026-cumcm/solutions/problem-b-radio-interference/README.md) 和 [2026 C：微网调度](../projects/2026-cumcm/solutions/problem-c-microgrid/README.md) 的论文、图表与核心实现。
 
 [AGENTS.md](../AGENTS.md) 汇总仓库入口与 authority，[AI 治理](../MCM_AI_Governance.md) 说明决策、自主执行、状态恢复和集成规则，[个人建模手册](../shared/templates/personal-modeling-playbook.md) 提供建模、实验、写作与交付方法。

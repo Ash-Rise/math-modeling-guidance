@@ -1,4 +1,4 @@
-"""D6 causal price candidates. Every forecaster receives a history PREFIX only."""
+"""Causal price candidates. Every forecaster receives a history prefix only."""
 import numpy as np
 
 SLOTS = 144

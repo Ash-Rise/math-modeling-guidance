@@ -40,7 +40,7 @@ def procure(history_load, history_pv, residuals, price, initial, battery,
 
 
 def ar28_forecast(history_load, history_pv, horizon_days=2):
-    """D9: fixed four-week half-life AR daily-level correction, history only.
+    """Fixed four-week half-life AR daily-level correction using history only.
 
     This corrects net load, not either physical load/PV component separately.
     Risk residuals must be rebuilt against this forecast at their issue dates.
@@ -122,7 +122,7 @@ def continuation_values(net, purchased, price, battery):
 
 def simulate(load, pv, price, battery, *, quantile=None, horizon_days=2,
              activate_day=31, control='value', forecast_model='base'):
-    """D9: base point/greedy January warm-up; requested forecast/control from Feb 1.
+    """Base point/greedy January warm-up; requested forecast/control from Feb 1.
 
     activate_day=8 is used only by the January reference regression test.
     Each day's order sees completed history only; real data enters execution.

@@ -4,7 +4,7 @@
 
 ## 成品论文
 
-[PDF](paper/paper.pdf) · [Word](paper/paper.docx) · [Markdown 源稿](paper/paper.md)
+[PDF](paper/paper.pdf) · [Word](paper/paper.docx) · [Markdown](paper/paper.md)
 
 论文展示确定性购电与储能配置、预测误差下的风险修正、日内预报滚动更新，以及波动电价下的预测与调度。
 
