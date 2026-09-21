@@ -4,11 +4,11 @@
 
 ## 从这里开始
 
-1. 先看下方两篇成品论文，了解最终呈现效果。
-2. 阅读 [15 分钟入门](docs/getting-started.md)，按竞赛轻量版建立最小项目。
+1. 先看下方成品论文，了解最终呈现效果。
+2. 阅读 [工作流入门](docs/getting-started.md)，建立完整项目结构。
 3. 阅读 [从决策到论文主张的案例](docs/decision-to-claim-case-study.md)，观察方法如何支撑论文中的一个关键主张。
 
-首次使用只需维护原题、必要的 `decisions.md`、一个复算入口、正式结果和论文。长项目或多代理协作再启用 `state.md`、更完整的冻结层级与集成边界。
+公开项目采用同一套完整工作流，以原题、Accepted Decisions、当前状态、实现、正式结果和论文分别承载对应信息。
 
 ## 成品论文
 
@@ -16,6 +16,8 @@
 |---|---|---|
 | A：烟幕干扰 | [PDF](projects/2025-cumcm/solutions/problem-a-smoke-screen/paper/paper.pdf) · [Word](projects/2025-cumcm/solutions/problem-a-smoke-screen/paper/paper.docx) · [Markdown](projects/2025-cumcm/solutions/problem-a-smoke-screen/paper/paper.md) | 几何判据、优化结果、联合遮蔽机制与证据边界 |
 | B：外延层厚度 | [PDF](projects/2025-cumcm/solutions/problem-b-epitaxial-thickness/paper/paper.pdf) · [Word](projects/2025-cumcm/solutions/problem-b-epitaxial-thickness/paper/paper.docx) · [Markdown](projects/2025-cumcm/solutions/problem-b-epitaxial-thickness/paper/paper.md) | 光学反演、多光束模型、敏感性与条件性结论 |
+| 2026 B：无线电干扰源定位 | [PDF](projects/2026-cumcm/solutions/problem-b-radio-interference/paper/paper.pdf) · [Word](projects/2026-cumcm/solutions/problem-b-radio-interference/paper/paper.docx) · [Markdown](projects/2026-cumcm/solutions/problem-b-radio-interference/paper/paper.md) | 集合定位、覆盖构造与离线任务验证 |
+| 2026 C：微网调度 | [PDF](projects/2026-cumcm/solutions/problem-c-microgrid/paper/paper.pdf) · [Word](projects/2026-cumcm/solutions/problem-c-microgrid/paper/paper.docx) · [Markdown](projects/2026-cumcm/solutions/problem-c-microgrid/paper/paper.md) | 预测误差、滚动优化、储能控制与波动电价 |
 
 ## 方法入口
 
@@ -24,13 +26,14 @@
 - [个人建模手册](shared/templates/personal-modeling-playbook.md)：建模、实验、写作与交付方法。
 - [论文样式配置](shared/templates/personal-paper-profile.yaml)：中文数学建模论文的可复用格式参数。
 - [共享工具与测试](shared/)：通用实现和最小回归测试。
-- [轻量与完整工作流](docs/getting-started.md)：最小目录、执行顺序与升级条件。
+- [工作流入门](docs/getting-started.md)：项目结构、执行顺序与主要产物。
 
 ## 公开项目示例
 
 | 项目集合 | 内容 |
 | --- | --- |
 | [2025 CUMCM](projects/2025-cumcm/README.md) | A/B 题论文、Word/PDF 成稿、核心代码、图表与结果 |
+| [2026 CUMCM](projects/2026-cumcm/README.md) | B/C 题论文、Word/PDF 成稿、核心代码与图表 |
 
 示例以论文 Markdown、Word/PDF 成稿为主入口，核心代码、图表和冻结结果用于解释论文结论的来源。项目 README 同时说明公开复算范围。
 
@@ -40,4 +43,4 @@
 
 ## 版权与使用
 
-仓库内容当前采用保留权利的 [版权说明](LICENSE.md)，可公开阅读与评价；复制、修改和再分发需要著作权人另行许可。外部链接内容适用其来源条款。
+仓库原创内容采用 [CC BY 4.0](LICENSE.md)，支持署名使用、复制、修改和再分发。外部链接内容适用其来源条款。

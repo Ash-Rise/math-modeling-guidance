@@ -24,4 +24,4 @@ python projects/2025-cumcm/solutions/problem-a-smoke-screen/scripts/reproduce.py
 
 默认复算问题 1，通常在一分钟内完成；输出 `status: matched` 及约 `1.391642669 s` 的有效遮蔽时间，即与公开冻结结果一致。`--scope q2` 可复算问题 2，耗时更长。
 
-公开代码提供前两问的运行入口；问题 3—5 以成品论文和图表展示，不作为公开快照中的完整重跑接口。
+公开代码提供前两问的运行入口；问题 3—5 通过成品论文和图表集中展示。
