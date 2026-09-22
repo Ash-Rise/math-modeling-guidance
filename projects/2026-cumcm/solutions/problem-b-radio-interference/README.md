@@ -10,7 +10,7 @@
 
 ## 支撑材料
 
-- [任务概要](problem-statement.md) · [关键决策](decisions.md) · [当前状态](state.md)
+- [任务概要](problem-statement.md) · [关键决策](decisions.md)
 - [核心实现](src/) · [运行脚本](scripts/) · [结果证据](results/) · [测试](tests/) · [论文图表](paper/figures/)
 
 论文覆盖 Q1—Q4 的几何判据、局部推进和端到端任务案例。核心实现的运行环境与依赖见 [requirements.txt](requirements.txt)。

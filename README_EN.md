@@ -13,8 +13,6 @@
 
 A Git project workspace designed to complement mathematical-modeling Skills: AI continuously advances modeling, computation, and paper delivery, while humans focus on consequential decisions.
 
-[Positioning](#positioning) · [How it works](#how-it-works) · [Advantages](#advantages) · [Getting started](#getting-started) · [Continuity and collaboration](#continuity-and-collaboration) · [Papers and project evidence](#papers-and-project-evidence) · [Documentation](#documentation)
-
 ## Positioning
 
 This repository provides a reusable way to organize a modeling project. Governance rules define human and AI responsibilities, project files preserve facts and current state, Git manages changes, and the model, code, results, and paper remain connected. It is intended for mathematical-modeling work that spans multiple conversations, sustained computation, or team collaboration.
