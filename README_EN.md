@@ -2,6 +2,8 @@
 
 [简体中文](README.md) | **English**
 
+![Modeling with Git: connecting problem interpretation, decisions, code, results, and papers](docs/assets/modeling-with-git.webp)
+
 > A Git-based workspace for AI-assisted mathematical modeling.
 
 [![CI](https://github.com/Ash-Rise/math-modeling-guidance/actions/workflows/quality.yml/badge.svg)](https://github.com/Ash-Rise/math-modeling-guidance/actions/workflows/quality.yml)
@@ -11,7 +13,7 @@
 
 A Git project workspace designed to complement mathematical-modeling Skills: AI continuously advances modeling, computation, and paper delivery, while humans focus on consequential decisions.
 
-[Positioning](#positioning) · [Advantages](#advantages) · [Getting started](#getting-started) · [Continuity and collaboration](#continuity-and-collaboration) · [Papers and project evidence](#papers-and-project-evidence) · [Documentation](#documentation)
+[Positioning](#positioning) · [How it works](#how-it-works) · [Advantages](#advantages) · [Getting started](#getting-started) · [Continuity and collaboration](#continuity-and-collaboration) · [Papers and project evidence](#papers-and-project-evidence) · [Documentation](#documentation)
 
 ## Positioning
 
@@ -30,6 +32,22 @@ The recommended setup combines contest routing with modeling execution: [handsom
 
 The repository provides rules, method guides, formatting profiles, shared utilities, and real projects for reuse. An agent capable of reading and writing project files and running commands applies these conventions. Skills, model services, and project dependencies are configured in the user's own environment.
 
+## How it works
+
+```mermaid
+flowchart LR
+    S[Skill and agent] -->|analyze and execute| W[Git project workspace]
+    H[Human] -->|consequential decisions| W
+    W --> P[Problem and attachments]
+    P --> D[Accepted decisions]
+    D --> C[Model and code]
+    C --> R[Formal results]
+    R --> O[Paper and delivery]
+    G[Git] -.versions · branches · history.-> W
+```
+
+The problem, decisions, state, implementation, results, and paper each carry a distinct kind of information; Git preserves their evolution. The detailed authority mapping appears below under Continuity and collaboration.
+
 ## Advantages
 
 - **Continuity across conversations.** Consequential decisions and the execution frontier live in project files, so a new conversation can resume from the current state without being distracted by obsolete reasoning or rejected approaches.
@@ -41,79 +59,30 @@ The repository provides rules, method guides, formatting profiles, shared utilit
 
 ## Getting started
 
-### 1. Obtain the workspace
-
-Prepare Git and an AI coding environment that can access local files and run commands, then configure the recommended Skills above or an equivalent mathematical-modeling Skill. Documentation and papers can be read directly on GitHub; for local use, clone the repository:
+Prepare Git, an AI coding environment with file and terminal access, and the recommended Skills above or an equivalent mathematical-modeling Skill:
 
 ```shell
 git clone https://github.com/Ash-Rise/math-modeling-guidance.git
 cd math-modeling-guidance
 ```
 
-If you already have a project repository, you can bring in [AGENTS.md](AGENTS.md), the [governance specification](MCM_AI_Governance.md), and the required [shared methods and utilities](shared/), while preserving their paths and license information.
+1. Create a project under `projects/` and add the original problem, attachments, objective, and delivery requirements.
+2. Start the agent at the repository root and ask it to read `AGENTS.md` before locating the project.
+3. Add decision, state, code, result, and paper files as the project needs them, with Git preserving each meaningful change.
 
-### 2. Add your task
-
-Create a project directory under `projects/`, add the original problem and attachments, and state the objective, resource constraints, and required deliverables. The public examples use `problem-statement.md` as a task summary. A new project should retain the original problem and may add a Markdown reading copy for repeated machine use; the original material remains authoritative for problem facts.
-
-A typical project layout follows. Create only the files the project needs:
-
-```text
-projects/my-modeling-project/
-├── problem-statement.md   # Readable problem copy; retain originals and attachments separately
-├── decisions.md           # Accepted consequential modeling decisions
-├── state.md               # Current frontier and next action for a long-running task
-├── requirements.txt       # Project runtime dependencies
-├── src/                   # Model implementation
-├── scripts/               # Solving, reproduction, and figure entry points
-├── results/               # Accepted results and supporting evidence
-├── tests/                 # Model contracts and regression checks
-└── paper/
-    ├── figures/           # Figures used in the paper
-    ├── paper.md           # Paper content
-    ├── paper.docx         # Word deliverable
-    └── paper.pdf          # PDF deliverable
-```
-
-Before tracking a new project, inspect [.gitignore](.gitignore). Its current exceptions are scoped to the public examples, so add precise exceptions for the new project's decisions, state, accepted results, and deliverables when appropriate.
-
-### 3. Start the agent in the project
-
-Open the agent at the repository root and adapt the following prompt with your project path and delivery requirements:
+A first prompt can be concise:
 
 > Read AGENTS.md at the repository root and locate projects/my-modeling-project. Recover the project from the original problem, decisions.md, and state.md. Read the governance specification and modeling playbook only as needed, and use the configured mathematical-modeling Skill to continue the task. Handle routine technical work autonomously. For consequential semantic choices, first check the relevant authority and complete the analysis, then present a decision recommendation. The current objective is ..., and the required deliverables are ....
 
-The project then follows this main path: organize the problem and data → establish the model and consequential decisions → implement, compute, and validate → accept formal results → write the paper and figures → verify delivery. New evidence may trigger a local revision, with dependent artifacts updated downstream.
-
-The Python examples recommend versions 3.11–3.13 and a project virtual environment using the relevant `requirements.txt`. Each project README lists its commands. Word and PDF generation depend on the document tools and delivery path supplied by the configured Skill. See [Getting Started](docs/getting-started.md) for more detail.
+See [Getting Started](docs/getting-started.md) for project layout, environment setup, `.gitignore` handling, the full execution sequence, and continuation prompts.
 
 ## Continuity and collaboration
 
-### Humans handle consequential decisions
+**Start new conversations proactively.** After a phase completes, a consequential decision is accepted, or a formal result is saved, update `state.md` and switch conversations. A new conversation recovers from repository authorities instead of relying on chat history.
 
-AI continuously handles problem organization, investigation, model implementation, experiments, computation, figures, validation, state maintenance, and paper synchronization. Important technical choices that affect numerical quality, reproducibility, or efficiency may proceed autonomously and be reported at a meaningful phase boundary.
+**Use branches to isolate changes.** Routine work proceeds on the stable branch; candidate implementations with substantial integration risk or a need for independent review use a temporary branch. Semantic changes still follow the consequential-decision process first.
 
-Humans decide choices involving problem interpretation, model meaning, important assumptions, objectives, hard constraints, evaluation semantics, allowed resources, substantive scope, or interpretation of conclusions. Before asking, AI checks the original problem and accepted decisions, eliminates unsupported alternatives, and completes enough analysis to present a grounded recommendation. This boundary applies both when a decision is first made and when an accepted decision may need to change.
-
-When an implementation carries substantial integration risk or final integration benefits from independent review, humans also decide whether to accept that change. The [governance specification](MCM_AI_Governance.md) defines the exact boundary, while routine technical work continues autonomously.
-
-### Start new conversations proactively
-
-**Treat a new conversation as a normal part of long-running modeling work.** A phase completion, accepted decision, or saved formal result is a natural point to switch. Switch promptly when an old conversation has accumulated obsolete analysis, repeated exploration, or rejected approaches.
-
-Before switching, ask AI to update effective decisions, preserve results, and compress current progress, unresolved items, and the next action into `state.md`. A new conversation first reads `AGENTS.md`, then locates the original problem, accepted decisions, current state, and relevant artifacts, loading method guides only as needed. `state.md` holds the execution frontier; model semantics and numerical claims remain grounded in their respective authorities.
-
-A continuation prompt can be short:
-
-> Continue projects/my-modeling-project. First recover the current state from the repository according to AGENTS.md, check accepted decisions and existing results, and then carry out the next action in state.md.
-
-### Use branches for changes and GitHub for collaboration
-
-Routine work proceeds on the stable integration branch. Candidate changes with substantial integration risk or a need for independent review use a temporary branch, where comparison and impact-scoped validation are completed against an exact version before integration. A branch isolates implementation; a change in model meaning still follows the consequential-decision process first.
-
-For team projects, GitHub can serve as the shared remote. Members begin from a common version, divide work by subproblem or artifact, develop in parallel branches, and integrate through commit diffs and pull-request review. Before taking over work, compare local changes with upstream state. At merge time, inspect model assumptions, result versions, and paper references in addition to resolving file conflicts. Generate and review Word/PDF deliverables after the content and results are integrated.
-
-### Keep each record in its proper role
+**Use GitHub for team collaboration.** Members start from a common version, develop in parallel branches, and integrate through commit diffs and pull-request review. Merge review includes assumptions, result versions, figures, and paper references.
 
 | Information | Current authority |
 |---|---|
@@ -124,7 +93,7 @@ For team projects, GitHub can serve as the shared remote. Members begin from a c
 | Paper content and layout | `paper.md`, approved Word layout, and formatting profile |
 | Version evolution, differences, and rollback | Git |
 
-Keep the decision file compact and update the state file as the frontier changes. At delivery, check consistency across code, results, figures, prose, and final formats. Remove temporary artifacts after their consumers are finished; Git retains ordinary history.
+AI autonomously advances analysis, implementation, experiments, and paper synchronization. Humans decide choices that change problem meaning, model semantics, important constraints, substantive scope, or interpretation of conclusions. See [AI Governance](MCM_AI_Governance.md) and [Getting Started](docs/getting-started.md) for the full boundary and continuation procedure.
 
 ## Papers and project evidence
 
