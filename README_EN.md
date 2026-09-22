@@ -2,96 +2,49 @@
 
 [简体中文](README.md) | **English**
 
-![Modeling with Git: connecting problem interpretation, decisions, code, results, and papers](docs/assets/modeling-with-git.webp)
+> Keep the problem, computation, results, and paper together so a new conversation can continue the work.
 
-> A Git-based workspace for AI-assisted mathematical modeling.
+Provide the problem, objective, and deadline. Your agent organizes files, computes and checks results, and explains important modeling choices in plain language. Git preserves local history; you do not need to learn branching before trying the workspace.
 
-[![CI](https://github.com/Ash-Rise/math-modeling-guidance/actions/workflows/quality.yml/badge.svg)](https://github.com/Ash-Rise/math-modeling-guidance/actions/workflows/quality.yml)
-[![Python 3.11–3.13](https://img.shields.io/badge/Python-3.11%E2%80%933.13-3572A5)](requirements.txt)
-[![Code: MIT](https://img.shields.io/badge/Code-MIT-2E8B57)](LICENSE-CODE.md)
-[![Content: CC BY 4.0](https://img.shields.io/badge/Content-CC_BY_4.0-2E8B57)](LICENSE-CONTENT.md)
+**Start here: [beginner guide (Chinese)](docs/getting-started.md). Try the [self-contained canteen example](projects/quickstart-canteen/README.md).**
 
-A Git project workspace designed to complement mathematical-modeling Skills: AI continuously advances modeling, computation, and paper delivery, while humans focus on consequential decisions.
+## Requirements
 
-## Positioning
+Use an AI coding environment that can open the project folder, read and write files, and execute terminal commands. A chat-only interface or read-only GitHub connection cannot run the local workflow. Git is needed for local version history; the example needs Python 3.11–3.13 and only its standard library. Let the agent check the environment first.
 
-This repository provides a reusable way to organize a modeling project. Governance rules define human and AI responsibilities, project files preserve facts and current state, Git manages changes, and the model, code, results, and paper remain connected. It is intended for mathematical-modeling work that spans multiple conversations, sustained computation, or team collaboration.
+Real modeling projects use configured modeling Skills or equivalent capabilities. This repository supplies project organization, not a model service or an autonomous application. A GitHub account is only needed for remote synchronization and collaboration; local commits do not upload files.
 
-**This repository is a workflow tool that complements a Skill. It is not a Skill installed into an agent or a one-prompt paper generator.** A Skill supplies execution methods for modeling, programming, research, and document production; this repository supplies persistent project boundaries, records, and delivery structure.
+## First run
 
-The recommended setup combines contest routing with modeling execution: [handsomeZR-netizen/mathmodel-skill](https://github.com/handsomeZR-netizen/mathmodel-skill) handles contest routing, rule boundaries, and phase continuity for CUMCM, MCM/ICM, and the Diangong Cup, while [XiaoMaColtAI/math-modeling-skill](https://github.com/XiaoMaColtAI/math-modeling-skill) supplies modeling analysis, computational implementation, and paper-delivery capabilities. Other mathematical-modeling Skills are also suitable when they can read repository files, run commands, and follow `AGENTS.md`.
+1. Download **Code → Download ZIP** and extract it, or clone this repository.
+2. Open the folder containing `AGENTS.md` in your AI coding environment.
+3. Send this prompt:
 
-| Component | Responsibility |
+> Read AGENTS.md and run the teaching example in projects/quickstart-canteen. Check Git and Python first. For a standalone ZIP download, verify that it is not inside another repository before initializing local Git. Follow the example README, explain the result and output paths, and save the completed work as a local checkpoint. Do not push to a remote.
+
+If Git has no commit identity, the agent should ask which name and email to configure locally. You can run the example without configuring an identity, but no commit checkpoint exists until a commit succeeds.
+
+For your own task, create `projects/my-project/input/`, add the original problem and attachments, and tell the agent the objective, deadline, and required output. Files for decisions, recovery, computation, and writing are added only when needed.
+
+## Everyday requests
+
+| Goal | Tell the agent |
 |---|---|
-| Agent and external Skills | Understand the task, select methods and tools, and perform analysis, coding, computation, and writing |
-| This repository | Organize task inputs, consequential decisions, current state, implementation, evidence, and papers, and define how they connect |
-| Git, optionally with GitHub | Preserve versions, compare changes, isolate branches, recover history, synchronize remotely, and support collaboration |
-| Humans | Decide matters that change problem meaning, important constraints, substantive scope, or interpretation of conclusions |
+| Start a task | Read AGENTS.md and the inputs in projects/my-project/input. Build a checkable baseline for this objective and deadline. |
+| Check progress | What is complete, where are the results, and what needs my decision? |
+| Pause | Save files and recovery state, then create a local checkpoint. |
+| Resume | Read AGENTS.md and recover projects/my-project from its files. Continue the next action. |
+| Compare a model | Preserve the usable baseline and evaluate this candidate before replacing accepted results. |
+| Restore work | Locate the last usable version and explain which files restoring it would affect. |
+| Update the paper | Update the paper from verified results and identify unsupported claims. |
 
-The repository provides rules, method guides, formatting profiles, shared utilities, and real projects for reuse. An agent capable of reading and writing project files and running commands applies these conventions. Skills, model services, and project dependencies are configured in the user's own environment.
+These are natural-language requests, not built-in application controls. Saving files, committing locally, and synchronizing remotely are separate actions. The agent should report which actually succeeded.
 
-## How it works
+## Collaboration and further setup
 
-```mermaid
-flowchart LR
-    S[Skill and agent] -->|analyze and execute| W[Git project workspace]
-    H[Human] -->|consequential decisions| W
-    W --> P[Problem and attachments]
-    P --> D[Accepted decisions]
-    D --> C[Model and code]
-    C --> R[Formal results]
-    R --> O[Paper and delivery]
-    G[Git] -.versions · branches · history.-> W
-```
+Start locally. For a team unfamiliar with Git, one member can maintain the main workspace and integrate contributions. Teams editing the repository concurrently should agree on ownership and use branches and pull requests where appropriate. See the [advanced workflow (Chinese)](docs/workflow-details.md) for file responsibilities, synchronization, and integration.
 
-The problem, decisions, state, implementation, results, and paper each carry a distinct kind of information; Git preserves their evolution. The detailed authority mapping appears below under Continuity and collaboration.
-
-## Advantages
-
-- **Continuity across conversations.** Consequential decisions and the execution frontier live in project files, so a new conversation can resume from the current state without being distracted by obsolete reasoning or rejected approaches.
-- **Stable model semantics.** The original problem owns problem facts, while decision records own accepted model meaning. Implementation and tests proceed from those sources, reducing semantic drift across phases.
-- **Continuous AI execution with focused human control.** AI handles routine implementation, numerical choices, experiments, validation, and paper synchronization. Humans decide choices that materially affect problem meaning or conclusions after the relevant analysis is ready.
-- **Comparable, isolated, recoverable changes.** Git commits preserve concrete changes, branches hold candidate implementations, and teams can review differences, integrate work, or return to a known version.
-- **Traceable paper claims.** Decisions, computation entry points, result files, and figures connect to claims in the paper. When an upstream model or result changes, affected text and deliverables can be updated together.
-- **Risk-matched validation.** Checks target concrete failure modes and affected surfaces, directing computation and review toward evidence that can change a decision.
-
-## Getting started
-
-Prepare Git, an AI coding environment with file and terminal access, and the recommended Skills above or an equivalent mathematical-modeling Skill:
-
-```shell
-git clone https://github.com/Ash-Rise/math-modeling-guidance.git
-cd math-modeling-guidance
-```
-
-1. Create a project under `projects/` and add the original problem, attachments, objective, and delivery requirements.
-2. Start the agent at the repository root and ask it to read `AGENTS.md` before locating the project.
-3. Add decision, state, code, result, and paper files as the project needs them, with Git preserving each meaningful change.
-
-A first prompt can be concise:
-
-> Read AGENTS.md at the repository root and locate projects/my-modeling-project. Recover the project from the original problem, decisions.md, and state.md. Read the governance specification and modeling playbook only as needed, and use the configured mathematical-modeling Skill to continue the task. Handle routine technical work autonomously. For consequential semantic choices, first check the relevant authority and complete the analysis, then present a decision recommendation. The current objective is ..., and the required deliverables are ....
-
-See [Getting Started](docs/getting-started.md) for project layout, environment setup, `.gitignore` handling, the full execution sequence, and continuation prompts.
-
-## Continuity and collaboration
-
-**Start new conversations proactively.** After a phase completes, a consequential decision is accepted, or a formal result is saved, update `state.md` and switch conversations. A new conversation recovers from repository authorities instead of relying on chat history.
-
-**Use branches to isolate changes.** Routine work proceeds on the stable branch; candidate implementations with substantial integration risk or a need for independent review use a temporary branch. Semantic changes still follow the consequential-decision process first.
-
-**Use GitHub for team collaboration.** Members start from a common version, develop in parallel branches, and integrate through commit diffs and pull-request review. Merge review includes assumptions, result versions, figures, and paper references.
-
-| Information | Current authority |
-|---|---|
-| Problem facts, data conditions, and requirements | Original problem and attachments |
-| Accepted model meaning and important assumptions | Project `decisions.md` |
-| Current execution frontier, unresolved items, and next action | Project `state.md`, maintained when a long task needs it |
-| Implementation and formal numerical claims | Source code and accepted result files |
-| Paper content and layout | `paper.md`, approved Word layout, and formatting profile |
-| Version evolution, differences, and rollback | Git |
-
-AI autonomously advances analysis, implementation, experiments, and paper synchronization. Humans decide choices that change problem meaning, model semantics, important constraints, substantive scope, or interpretation of conclusions. See [AI Governance](MCM_AI_Governance.md) and [Getting Started](docs/getting-started.md) for the full boundary and continuation procedure.
+The [canteen example](projects/quickstart-canteen/README.md) includes synthetic data and generates results and a Markdown report with one command. It demonstrates execution, a parameter comparison, and session recovery; it is not evidence of real-world predictive performance.
 
 ## Papers and project evidence
 
@@ -111,7 +64,8 @@ For a concrete example of how a decision propagates into a paper claim, read [Fr
 | Entry | Purpose |
 |---|---|
 | [AGENTS.md](AGENTS.md) | Repository rules and routing read by an agent on entry |
-| [Getting Started](docs/getting-started.md) | Project structure, execution sequence, and example setup |
+| [Getting Started](docs/getting-started.md) | First run, daily requests, and session recovery (Chinese) |
+| [Advanced Workflow](docs/workflow-details.md) | File responsibilities, Git, and team integration (Chinese) |
 | [AI Governance](MCM_AI_Governance.md) | Authority boundaries, decision gate, autonomous execution, state recovery, and integration rules |
 | [Modeling and Paper Playbook](shared/templates/personal-modeling-playbook.md) | Model selection, experiment design, evidence strength, paper reasoning, and expression |
 | [Paper Formatting Profile](shared/templates/personal-paper-profile.yaml) | Reusable formatting parameters |

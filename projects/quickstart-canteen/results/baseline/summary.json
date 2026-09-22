@@ -1,0 +1,28 @@
+{
+  "scope": "Synthetic equal-weight scenarios; not out-of-sample validation",
+  "input": "input/demand.csv",
+  "demands": [
+    80,
+    85,
+    90,
+    95,
+    100,
+    100,
+    105,
+    110,
+    115,
+    120
+  ],
+  "scenario_count": 10,
+  "capacity": 140,
+  "waste_cost_yuan": 3,
+  "shortage_cost_yuan": 9,
+  "recommended_quantity": 110,
+  "optimal_quantities": [
+    110
+  ],
+  "total_loss_yuan": 480,
+  "mean_loss_yuan": 48.0,
+  "mean_waste": 11.5,
+  "mean_shortage": 1.5
+}
