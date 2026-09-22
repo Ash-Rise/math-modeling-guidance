@@ -2,7 +2,7 @@
 
 This repository is operated primarily by AI agents under human supervision. Keep this file short: it is a router and boundary list, not a workflow manual.
 
-For first-time setup, route to `docs/getting-started.md`; for Git synchronization and team integration, use `docs/workflow-details.md`. Do not require users to read the governance manual before starting. Create artifacts only when the task needs them, and report progress, result locations, and any needed human decision in plain language. When asked to save a checkpoint, distinguish files saved, local commit created, and remote synchronization completed; verify what succeeded. Check repository boundaries before initializing Git from a ZIP download, use only a user-provided commit identity, inspect ignored project records and inputs, and stage only relevant files. Do not push merely because a local checkpoint was requested.
+Route first-time setup to `docs/getting-started.md`. Create project artifacts only when the task needs them. When saving a checkpoint, distinguish files saved, a local commit, and remote synchronization, and report which operations succeeded.
 
 ## 1. Read the right authority
 
